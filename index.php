@@ -82,15 +82,6 @@ border: 2px solid black;
     }
     ?>
 </table>
-
-<?php
-// To not show pagination for records < 11
-
-if ($total_records > $limit) {
-    
-
-
-?>
  
 <!-- Pagination -->
  
@@ -150,11 +141,6 @@ if ($total_records > $limit) {
         <?php endif; ?>
  
     </ul>
-    <?php
-
-        }
-
-        ?>
 <br>
     <div class = "pagination justify-content-center">
             <a href="add_student.php" class="btn btn-primary">Add a new student</a>
