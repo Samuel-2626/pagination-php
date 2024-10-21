@@ -86,7 +86,7 @@ border: 2px solid black;
 <?php
 // To not show pagination for records < 11
 
-if ($total_records > 10) {
+if ($total_records > $limit) {
     
 
 
