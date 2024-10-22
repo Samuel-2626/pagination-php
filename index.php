@@ -40,7 +40,7 @@ $result = $conn->query($query);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
    
     <style>
-
+ 
         /* Apply colors to the pagination */
         .pagination .page-item.active .page-link {
             background-color: #004C97;
@@ -49,16 +49,16 @@ $result = $conn->query($query);
         .pagination .page-link {
             color: #323232 ;
         }
-
+ 
     </style>
  
 </head>
 <body>
-
+ 
 <div class="container">
-
+ 
 <br>
-
+ 
 <h1 class="text-center">Student Records</h1>
 <br>
 <table class="table table-bordered table-striped">
@@ -82,6 +82,12 @@ border: 2px solid black;
     }
     ?>
 </table>
+ 
+<?php
+// To not show pagination for records < 11
+if ($total_records > $limit) {
+   
+?>
  
 <!-- Pagination -->
  
@@ -141,17 +147,22 @@ border: 2px solid black;
         <?php endif; ?>
  
     </ul>
+    <?php
+ 
+        }
+ 
+        ?>
 <br>
     <div class = "pagination justify-content-center">
             <a href="add_student.php" class="btn btn-primary">Add a new student</a>
         </div>
-
+ 
 </div>
-
+ 
 <br>
 <br>
  
-
+ 
  
 <!-- Include Bootstrap JS for responsive behaviors -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
